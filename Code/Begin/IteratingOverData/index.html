@@ -3,9 +3,27 @@
 <head>
     <title>Iterating Over Data</title>
 </head>
-<body ng-init="names=['Dave','Jeff','Heedy','Danny']">
+<body ng-init="people=[
+{name:'John', city:'Chandler'},
+{name:'Tina', city:'New York'}
+]">
+    <h3>Iterating through data with ng-repeat</h3>
+    <ul>
+        <li ng-repeat="person in people">{{person.name}} - {{person.city}}</li>
+    </ul>
 
-
+    <br>
+<table style="border: 1px solid black;">
+    <tr>
+        <td>Name</td>
+        <td>City</td>
+    </tr>
+    
+    <tr ng-repeat="person in people">
+        <td>{{person.name}}</td>
+        <td>{{person.city}}</td>
+    </tr>
+</table>
 
     <script src="angular.js"></script>
 </body>
