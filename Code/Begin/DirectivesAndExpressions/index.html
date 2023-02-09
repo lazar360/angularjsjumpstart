@@ -11,5 +11,36 @@
     <br />
     <button ng-click="name='Michelle'">Change Name</button>
     <script src="angular.js"></script>
+    <script>
+
+    let listTiers = [
+        {"name" : "TEST SEPA", "numeroID" : 1089},
+        {"name" : "Le Petit Baigneur", "numeroID" : 00002}
+    ];
+
+    let myTiers = {"name" : "TEST", "numeroID" : 1089}
+
+        for(let i = 0, len=listTiers.length; i<len; ++i){
+            if(listTiers[i].numeroID === myTiers.numeroID){
+                console.log(i);
+                listTiers.splice(i, 1, myTiers);
+            }
+        }
+
+        for(tiers of listTiers){
+            console.log(tiers.name);
+        }
+
+//     months.splice(1, 0, 'Feb');
+// // Inserts at index 1
+// console.log(months);
+// // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+// months.splice(4, 1, 'May');
+// // Replaces 1 element at index 4
+// console.log(months);
+// // Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+    </script>
 </body>
 </html>
